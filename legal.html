@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="الصفحات القانونية لموقع صِحَّتي — سياسة الخصوصية، شروط الاستخدام، إخلاء المسؤولية الطبية، وسياسة ملفات الارتباط.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صِحَّتي — الصفحات القانونية</title>
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue:#1565c0; --blue-h:#1976d2; --blue-l:#e3f0ff; --blue-ll:#f0f6ff;
+  --teal:#00838f; --green:#2e7d32; --green-l:#e8f5e9;
+  --red:#c62828; --red-l:#ffebee; --gold:#e65100; --gold-l:#fff3e0;
+  --orange:#f57c00; --orange-l:#fff3e0;
+  --bg:#f4f8ff; --surface:#fff; --surface2:#f8faff;
+  --ink:#0d1b2e; --ink2:#2c3e50; --mid:#546e7a; --muted:#90a4ae;
+  --border:#dde6f5; --border2:#eef2fa;
+  --sh:0 2px 14px rgba(21,101,192,.08);
+  --sh-lg:0 6px 24px rgba(21,101,192,.13);
+  --r:10px; --r-lg:14px;
+}
+[data-theme="dark"] {
+  --bg:#0d1117; --surface:#161b22; --surface2:#1c2128;
+  --ink:#e6edf3; --ink2:#c9d1d9; --mid:#8b949e; --muted:#6e7681;
+  --border:#30363d; --border2:#21262d;
+  --blue-l:#1c2d4a; --blue-ll:#172030;
+  --green-l:#0d2612; --red-l:#2d1215; --gold-l:#2d1a00; --orange-l:#2d1800;
+  --sh:0 2px 14px rgba(0,0,0,.35); --sh-lg:0 6px 24px rgba(0,0,0,.5);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--ink);direction:rtl;line-height:1.8;transition:background .3s,color .3s}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ══ PROGRESS ══ */
+#prog{position:fixed;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--teal));width:0%;z-index:9999;transition:width .1s}
+
+/* ══ HEADER ══ */
+header{background:var(--surface);border-bottom:3px solid var(--blue);position:sticky;top:0;z-index:200;box-shadow:var(--sh);transition:background .3s}
+.hdr{max-width:1100px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:62px;gap:14px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--blue),var(--teal));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.5rem;font-weight:700;color:var(--blue);line-height:1}
+.logo-ar span{color:var(--teal)}
+.logo-sub{font-size:.6rem;color:var(--mid);letter-spacing:1.5px}
+.hdr-right{display:flex;align-items:center;gap:10px}
+.btn-home{background:var(--blue-l);color:var(--blue);border:none;padding:8px 16px;border-radius:8px;font-size:.84rem;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s}
+.btn-home:hover{background:var(--blue);color:#fff}
+.btn-icon{width:36px;height:36px;border-radius:7px;background:var(--blue-l);border:none;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--blue);cursor:pointer;transition:background .2s}
+.btn-icon:hover{background:var(--blue-ll)}
+
+/* ══ HERO BANNER ══ */
+.legal-hero{background:linear-gradient(135deg,var(--blue) 0%,var(--teal) 100%);padding:40px 20px;text-align:center;color:#fff}
+.legal-hero h1{font-family:'Noto Naskh Arabic',serif;font-size:2rem;font-weight:700;margin-bottom:10px}
+.legal-hero p{font-size:.92rem;opacity:.85;max-width:560px;margin:auto;line-height:1.7}
+.legal-hero .update-date{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border-radius:20px;padding:5px 14px;font-size:.78rem;font-weight:700;margin-top:14px}
+
+/* ══ LAYOUT ══ */
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+.legal-grid{display:grid;grid-template-columns:240px 1fr;gap:32px;padding:36px 0 60px;align-items:start}
+
+/* ══ SIDEBAR NAV ══ */
+.legal-nav{position:sticky;top:76px;background:var(--surface);border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh)}
+.legal-nav-title{background:var(--blue);color:#fff;padding:14px 18px;font-size:.82rem;font-weight:900;text-transform:uppercase;letter-spacing:.5px}
+.legal-nav ul{list-style:none;padding:8px 0}
+.legal-nav ul li a{display:flex;align-items:center;gap:10px;padding:11px 18px;font-size:.84rem;font-weight:700;color:var(--ink2);transition:all .2s;border-right:3px solid transparent}
+.legal-nav ul li a:hover{background:var(--blue-l);color:var(--blue);text-decoration:none}
+.legal-nav ul li a.active{background:var(--blue-l);color:var(--blue);border-right-color:var(--blue)}
+.legal-nav ul li a .nav-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.nav-blue{background:var(--blue-l)}
+.nav-green{background:var(--green-l)}
+.nav-red{background:var(--red-l)}
+.nav-orange{background:var(--orange-l)}
+.nav-gold{background:var(--gold-l)}
+.legal-nav-footer{padding:14px 18px;border-top:1px solid var(--border);font-size:.74rem;color:var(--muted);line-height:1.6}
+
+/* ══ CONTENT ══ */
+.legal-content{display:flex;flex-direction:column;gap:32px}
+
+/* Page section */
+.legal-page{background:var(--surface);border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh);scroll-margin-top:90px}
+.page-header{padding:24px 28px;border-bottom:2px solid var(--border2)}
+.page-header-inner{display:flex;align-items:center;gap:14px}
+.page-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.icon-blue{background:var(--blue-l)}
+.icon-green{background:var(--green-l)}
+.icon-red{background:var(--red-l)}
+.icon-orange{background:var(--orange-l)}
+.icon-gold{background:var(--gold-l)}
+.page-title{font-family:'Noto Naskh Arabic',serif;font-size:1.35rem;font-weight:700;color:var(--ink);line-height:1.3}
+.page-subtitle{font-size:.8rem;color:var(--mid);margin-top:3px}
+.page-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.meta-chip{display:inline-flex;align-items:center;gap:5px;background:var(--blue-l);color:var(--blue);padding:4px 11px;border-radius:20px;font-size:.72rem;font-weight:700}
+.meta-chip.green{background:var(--green-l);color:var(--green)}
+.meta-chip.red{background:var(--red-l);color:var(--red)}
+
+.page-body{padding:26px 28px;display:flex;flex-direction:column;gap:22px}
+
+/* Section blocks */
+.sec-block{display:flex;flex-direction:column;gap:10px}
+.sec-block h3{font-family:'Noto Naskh Arabic',serif;font-size:1.05rem;font-weight:700;color:var(--blue);display:flex;align-items:center;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border2)}
+.sec-block h3 .h-icon{font-size:.95rem}
+.sec-block p{font-size:.9rem;color:var(--ink2);line-height:1.9}
+.sec-block ul,.sec-block ol{padding-right:20px;display:flex;flex-direction:column;gap:8px}
+.sec-block ul li,.sec-block ol li{font-size:.9rem;color:var(--ink2);line-height:1.8}
+.sec-block ul li::marker{color:var(--blue)}
+
+/* Alert boxes */
+.alert{display:flex;gap:12px;padding:14px 16px;border-radius:9px;align-items:flex-start;font-size:.86rem;line-height:1.7}
+.alert-icon{font-size:1.2rem;flex-shrink:0;margin-top:1px}
+.alert.info{background:var(--blue-l);border:1px solid #b5d4f4;color:var(--ink2)}
+.alert.warning{background:var(--gold-l);border:1px solid #ffcc80;color:#5d3f00}
+.alert.danger{background:var(--red-l);border:1px solid #ffcdd2;color:#7f1a1a}
+.alert.success{background:var(--green-l);border:1px solid #c8e6c9;color:#1a4f1c}
+.alert strong{font-weight:900}
+
+/* Table */
+.legal-table{width:100%;border-collapse:collapse;font-size:.86rem;border-radius:9px;overflow:hidden;border:1px solid var(--border)}
+.legal-table th{background:var(--blue);color:#fff;padding:11px 14px;text-align:right;font-weight:700;font-size:.82rem}
+.legal-table td{padding:11px 14px;border-bottom:1px solid var(--border2);color:var(--ink2);line-height:1.7}
+.legal-table tr:last-child td{border-bottom:none}
+.legal-table tr:nth-child(even) td{background:var(--surface2)}
+.td-green{color:var(--green);font-weight:700}
+.td-red{color:var(--red);font-weight:700}
+
+/* Contact box */
+.contact-box{background:linear-gradient(135deg,var(--blue-l),var(--blue-ll));border:1px solid #b5d4f4;border-radius:10px;padding:18px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.contact-info{flex:1;min-width:200px}
+.contact-info h4{font-size:.92rem;font-weight:900;color:var(--blue);margin-bottom:6px}
+.contact-info p{font-size:.82rem;color:var(--mid);line-height:1.6}
+.contact-links{display:flex;gap:8px;flex-wrap:wrap}
+.contact-btn{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;padding:8px 16px;border-radius:7px;font-size:.8rem;font-weight:700;transition:background .2s;cursor:pointer;border:none;font-family:inherit}
+.contact-btn:hover{background:var(--blue-h);text-decoration:none;color:#fff}
+.contact-btn.outline{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
+.contact-btn.outline:hover{background:var(--blue);color:#fff}
+
+/* Signature */
+.legal-sig{background:var(--surface2);border-radius:9px;padding:16px 20px;border:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.sig-left{font-size:.82rem;color:var(--mid);line-height:1.7}
+.sig-left strong{color:var(--ink);font-size:.86rem}
+.sig-stamp{display:flex;align-items:center;gap:8px;background:var(--green-l);border:1px solid #c8e6c9;border-radius:20px;padding:6px 14px;font-size:.76rem;font-weight:700;color:var(--green)}
+
+/* Divider */
+.sec-divider{height:1px;background:linear-gradient(90deg,var(--blue-l),transparent);margin:4px 0}
+
+/* ══ COOKIE BANNER ══ */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--ink);color:#e0e0e0;padding:16px 24px;z-index:9999;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 -4px 20px rgba(0,0,0,.3);transform:translateY(100px);transition:transform .4s ease;font-size:.84rem}
+.cookie-banner.show{transform:translateY(0)}
+.cookie-text{flex:1;min-width:250px;line-height:1.6}
+.cookie-text a{color:#90caf9}
+.cookie-actions{display:flex;gap:8px;flex-wrap:wrap;flex-shrink:0}
+.cookie-btn{padding:8px 18px;border-radius:7px;font-size:.82rem;font-weight:700;cursor:pointer;font-family:inherit;border:none;transition:all .2s;white-space:nowrap}
+.cookie-btn.accept{background:var(--blue);color:#fff}
+.cookie-btn.accept:hover{background:var(--blue-h)}
+.cookie-btn.reject{background:rgba(255,255,255,.1);color:#e0e0e0;border:1px solid rgba(255,255,255,.2)}
+.cookie-btn.reject:hover{background:rgba(255,255,255,.15)}
+.cookie-btn.settings{background:transparent;color:#90caf9;border:1px solid #90caf9}
+
+/* ══ BACK TO TOP ══ */
+#btop{position:fixed;bottom:80px;left:24px;width:42px;height:42px;background:var(--blue);color:#fff;border:none;border-radius:50%;font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(20px);transition:all .3s;z-index:100;box-shadow:var(--sh-lg)}
+#btop.show{opacity:1;transform:translateY(0)}
+#btop:hover{background:var(--blue-h);transform:translateY(-2px)}
+
+/* ══ TOAST ══ */
+.toast{position:fixed;top:80px;left:50%;transform:translateX(-50%) translateY(-80px);background:var(--ink);color:#fff;padding:10px 20px;border-radius:25px;font-size:.82rem;font-weight:700;z-index:9999;opacity:0;transition:all .3s;white-space:nowrap;box-shadow:var(--sh-lg)}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+.toast.ok{background:var(--green)}
+
+/* ══ FOOTER ══ */
+.legal-footer{background:var(--ink);color:#7a95b0;padding:28px 20px;margin-top:0;text-align:center}
+.legal-footer p{font-size:.8rem;margin-bottom:6px}
+.legal-footer a{color:#7a95b0;transition:color .2s}
+.legal-footer a:hover{color:#fff;text-decoration:none}
+.legal-footer .links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:10px;font-size:.78rem}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:820px){
+  .legal-grid{grid-template-columns:1fr}
+  .legal-nav{position:static}
+  .legal-nav ul{display:flex;flex-wrap:wrap;padding:8px}
+  .legal-nav ul li a{border-right:none;border-radius:7px;padding:8px 12px}
+  .legal-nav ul li a.active{border-right:none}
+}
+@media(max-width:520px){
+  .legal-hero h1{font-size:1.5rem}
+  .page-body{padding:18px 16px}
+  .page-header{padding:18px 16px}
+  .contact-box{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<!-- HEADER -->
+<header>
+  <div class="hdr">
+    <div class="logo">
+      <div class="logo-icon">🌿</div>
+      <div>
+        <div class="logo-ar">صِحَّ<span>تي</span></div>
+        <div class="logo-sub">مجلة التغذية والصحة</div>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <button class="btn-home" onclick="window.location.href='index.html'">← العودة للموقع</button>
+      <button class="btn-icon" id="themeBtn" onclick="toggleTheme()" title="الوضع الليلي">🌙</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="legal-hero">
+  <h1>⚖️ الصفحات القانونية</h1>
+  <p>نلتزم بالشفافية الكاملة تجاه مستخدمينا. تحتوي هذه الصفحة على جميع السياسات القانونية لموقع صِحَّتي بما يتوافق مع القانون المغربي ومعايير الخصوصية الدولية.</p>
+  <div class="update-date">📅 آخر تحديث: ٢ أبريل ٢٠٢٦</div>
+</div>
+
+<!-- MAIN -->
+<div class="wrap">
+  <div class="legal-grid">
+
+    <!-- SIDEBAR NAV -->
+    <aside>
+      <nav class="legal-nav">
+        <div class="legal-nav-title">📋 فهرس الصفحات القانونية</div>
+        <ul>
+          <li>
+            <a href="#privacy" onclick="setActive(this)">
+              <span class="nav-icon nav-blue">🔒</span>
+              سياسة الخصوصية
+            </a>
+          </li>
+          <li>
+            <a href="#terms" onclick="setActive(this)">
+              <span class="nav-icon nav-green">📄</span>
+              شروط الاستخدام
+            </a>
+          </li>
+          <li>
+            <a href="#medical" onclick="setActive(this)">
+              <span class="nav-icon nav-red">🏥</span>
+              إخلاء المسؤولية الطبية
+            </a>
+          </li>
+          <li>
+            <a href="#cookies" onclick="setActive(this)">
+              <span class="nav-icon nav-orange">🍪</span>
+              سياسة ملفات الارتباط
+            </a>
+          </li>
+          <li>
+            <a href="#ai" onclick="setActive(this)">
+              <span class="nav-icon nav-gold">🤖</span>
+              سياسة المحتوى الذكي
+            </a>
+          </li>
+        </ul>
+        <div class="legal-nav-footer">
+          هذه الوثائق القانونية سارية المفعول اعتباراً من ١ يناير ٢٠٢٦. للاستفسار: <a href="mailto:legal@sihaty.ma">legal@sihaty.ma</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- CONTENT -->
+    <div class="legal-content">
+
+      <!-- ════════════════════════════
+           1. سياسة الخصوصية
+      ════════════════════════════ -->
+      <section class="legal-page" id="privacy">
+        <div class="page-header">
+          <div class="page-header-inner">
+            <div class="page-icon icon-blue">🔒</div>
+            <div>
+              <div class="page-title">سياسة الخصوصية وحماية البيانات</div>
+              <div class="page-subtitle">Privacy Policy — متوافقة مع القانون 09-08 المغربي و GDPR الأوروبي</div>
+            </div>
+          </div>
+          <div class="page-meta">
+            <span class="meta-chip">📅 آخر تحديث: أبريل ٢٠٢٦</span>
+            <span class="meta-chip green">✅ متوافقة مع GDPR</span>
+            <span class="meta-chip green">✅ متوافقة مع قانون 09-08</span>
+          </div>
+        </div>
+
+        <div class="page-body">
+
+          <div class="alert success">
+            <span class="alert-icon">✅</span>
+            <div><strong>التزامنا بخصوصيتك:</strong> نحن في صِحَّتي نأخذ خصوصية بياناتك على محمل الجد. هذه الوثيقة تشرح بوضوح ما نجمعه، وكيف نستخدمه، وحقوقك الكاملة.</div>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">🏢</span> ١. معلومات المسؤول عن معالجة البيانات</h3>
+            <p>المسؤول عن معالجة بياناتك الشخصية هو موقع <strong>صِحَّتي</strong>، مجلة إلكترونية متخصصة في التغذية والصحة.</p>
+            <ul>
+              <li><strong>الاسم التجاري:</strong> صِحَّتي — مجلة التغذية والصحة</li>
+              <li><strong>البريد الإلكتروني:</strong> legal@sihaty.ma</li>
+              <li><strong>العنوان:</strong> الدار البيضاء، المملكة المغربية</li>
+              <li><strong>الموقع الإلكتروني:</strong> www.sihaty.ma</li>
+            </ul>
+          </div>
+
+          <div class="sec-divider"></div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">📊</span> ٢. البيانات التي نجمعها</h3>
+            <table class="legal-table">
+              <thead>
+                <tr>
+                  <th>نوع البيانات</th>
+                  <th>الغرض</th>
+                  <th>مدة الاحتفاظ</th>
+                  <th>الأساس القانوني</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>عنوان البريد الإلكتروني</td>
+                  <td>الاشتراك في النشرة البريدية</td>
+                  <td>حتى إلغاء الاشتراك</td>
+                  <td class="td-green">موافقة صريحة</td>
+                </tr>
+                <tr>
+                  <td>بيانات التصفح (IP، المتصفح)</td>
+                  <td>تحسين الأداء والأمان</td>
+                  <td>٩٠ يوماً</td>
+                  <td class="td-green">مصلحة مشروعة</td>
+                </tr>
+                <tr>
+                  <td>تفضيلات المستخدم (dark mode)</td>
+                  <td>تحسين تجربة الاستخدام</td>
+                  <td>محلي في المتصفح</td>
+                  <td class="td-green">موافقة ضمنية</td>
+                </tr>
+                <tr>
+                  <td>المقالات المولَّدة والمحفوظة</td>
+                  <td>وظيفة الموقع</td>
+                  <td>محلي في متصفحك فقط</td>
+                  <td class="td-green">طلب المستخدم</td>
+                </tr>
+                <tr>
+                  <td>بيانات الإعلانات المرسلة</td>
+                  <td>التواصل مع المعلنين</td>
+                  <td>سنة واحدة</td>
+                  <td class="td-green">تنفيذ عقد</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">🚫</span> ٣. ما لا نجمعه أبداً</h3>
+            <ul>
+              <li>لا نجمع معلومات بطاقات الدفع أو البيانات المصرفية</li>
+              <li>لا نجمع البيانات الصحية الشخصية للمستخدمين</li>
+              <li>لا نبيع بياناتك لأي طرف ثالث بأي ثمن</li>
+              <li>لا نشارك بياناتك مع المعلنين بشكل مباشر</li>
+              <li>لا نستخدم تقنيات التتبع العدائية أو fingerprinting</li>
+            </ul>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">👤</span> ٤. حقوقك الكاملة بموجب القانون</h3>
+            <ul>
+              <li><strong>حق الوصول:</strong> يمكنك طلب نسخة من جميع بياناتك لدينا في أي وقت</li>
+              <li><strong>حق التصحيح:</strong> يمكنك تصحيح أي بيانات غير دقيقة</li>
+              <li><strong>حق الحذف:</strong> يمكنك طلب حذف جميع بياناتك نهائياً</li>
+              <li><strong>حق الاعتراض:</strong> يمكنك الاعتراض على أي معالجة لبياناتك</li>
+              <li><strong>حق النقل:</strong> يمكنك الحصول على بياناتك بصيغة قابلة للقراءة الآلية</li>
+              <li><strong>حق سحب الموافقة:</strong> يمكنك سحب موافقتك في أي وقت دون أثر رجعي</li>
+            </ul>
+          </div>
+
+          <div class="alert info">
+            <span class="alert-icon">ℹ️</span>
+            <div><strong>لممارسة حقوقك:</strong> أرسل طلبك إلى <a href="mailto:privacy@sihaty.ma">privacy@sihaty.ma</a>. سنرد خلال <strong>٣٠ يوماً</strong> وفق ما يستوجبه القانون 09-08 المغربي.</div>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">🔐</span> ٥. أمان البيانات</h3>
+            <p>نطبق معايير أمان صناعية لحماية بياناتك تشمل: تشفير HTTPS لجميع الاتصالات، تخزين آمن للبيانات الحساسة، مراجعات دورية للأمان، وحد أدنى من الوصول للبيانات بمبدأ الحاجة للمعرفة. في حال حدوث أي خرق للبيانات، سنخطرك خلال <strong>٧٢ ساعة</strong> وفق متطلبات GDPR.</div>
+          </div>
+
+          <div class="contact-box">
+            <div class="contact-info">
+              <h4>📩 تواصل مع مسؤول الخصوصية</h4>
+              <p>لأي استفسار حول خصوصيتك أو لممارسة حقوقك القانونية</p>
+            </div>
+            <div class="contact-links">
+              <a class="contact-btn" href="mailto:privacy@sihaty.ma">📧 privacy@sihaty.ma</a>
+              <button class="contact-btn outline" onclick="toast('📋 تم نسخ البريد الإلكتروني','ok');copyText('privacy@sihaty.ma')">نسخ البريد</button>
+            </div>
+          </div>
+
+          <div class="legal-sig">
+            <div class="sig-left">
+              <strong>سياسة الخصوصية — صِحَّتي</strong><br>
+              سارية المفعول منذ: ١ يناير ٢٠٢٦ · آخر مراجعة: ٢ أبريل ٢٠٢٦
+            </div>
+            <div class="sig-stamp">✅ معتمدة ومراجعة قانونياً</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════
+           2. شروط الاستخدام
+      ════════════════════════════ -->
+      <section class="legal-page" id="terms">
+        <div class="page-header">
+          <div class="page-header-inner">
+            <div class="page-icon icon-green">📄</div>
+            <div>
+              <div class="page-title">شروط وأحكام الاستخدام</div>
+              <div class="page-subtitle">Terms of Use — يرجى قراءتها بعناية قبل استخدام الموقع</div>
+            </div>
+          </div>
+          <div class="page-meta">
+            <span class="meta-chip">📅 آخر تحديث: أبريل ٢٠٢٦</span>
+            <span class="meta-chip green">✅ القانون المغربي</span>
+          </div>
+        </div>
+
+        <div class="page-body">
+
+          <div class="alert warning">
+            <span class="alert-icon">⚠️</span>
+            <div><strong>تنبيه مهم:</strong> باستخدامك لموقع صِحَّتي، فإنك توافق على هذه الشروط والأحكام بالكامل. إذا كنت لا توافق على أي بند منها، يرجى التوقف عن استخدام الموقع.</div>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">📖</span> ١. تعريف الخدمة</h3>
+            <p>موقع صِحَّتي هو مجلة إلكترونية تثقيفية متخصصة في التغذية والصحة. يقدم الموقع مقالات تثقيفية، أدوات تفاعلية، ومحتوى مولَّداً بالذكاء الاصطناعي. <strong>الموقع ليس منصة طبية ولا يقدم استشارات طبية متخصصة.</strong></p>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">✅</span> ٢. الاستخدام المسموح به</h3>
+            <ul>
+              <li>قراءة المحتوى والاستفادة منه للأغراض الشخصية والتثقيفية</li>
+              <li>مشاركة الروابط مع ذكر المصدر (صِحَّتي)</li>
+              <li>استخدام أداة توليد المقالات لإنتاج محتوى أصيل لموقعك</li>
+              <li>التواصل معنا للإعلان أو الاستفسار</li>
+              <li>طباعة المقالات للاستخدام الشخصي غير التجاري</li>
+            </ul>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">🚫</span> ٣. الاستخدام المحظور</h3>
+            <ul>
+              <li>نسخ المحتوى ونشره على مواقع أخرى دون إذن كتابي مسبق</li>
+              <li>استخدام الموقع لأغراض غير قانونية أو ضارة</li>
+              <li>محاولة اختراق الموقع أو التلاعب بمحتواه</li>
+              <li>إرسال بريد مزعج أو محتوى مسيء عبر نماذج الموقع</li>
+              <li>انتحال صفة الموقع أو إنشاء مواقع مضللة مشابهة</li>
+              <li>استخراج البيانات تلقائياً (Scraping) دون موافقة مسبقة</li>
+            </ul>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">©️</span> ٤. حقوق الملكية الفكرية</h3>
+            <p>جميع المحتويات الأصلية في الموقع (التصميم، الشعار، المقالات المحررة يدوياً) محمية بحقوق النشر وتعود ملكيتها لصِحَّتي. أما <strong>المقالات المولَّدة بأداة الذكاء الاصطناعي</strong>، فتعود ملكيتها الكاملة للمستخدم الذي طلب توليدها، وله الحق في نشرها ونسبها لنفسه.</p>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">🔗</span> ٥. الروابط الخارجية</h3>
+            <p>قد يحتوي الموقع على روابط لمواقع خارجية للاستئناس فقط. لا نتحمل أي مسؤولية عن محتوى هذه المواقع الخارجية أو سياسات خصوصيتها. ننصح بمراجعة سياسات كل موقع تزوره.</p>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">⚖️</span> ٦. القانون المطبق وتسوية النزاعات</h3>
+            <p>تخضع هذه الشروط للقانون المغربي. في حال نشوء أي نزاع، يكون الاختصاص القضائي لمحاكم مدينة الدار البيضاء، المملكة المغربية. يُشجَّع على حل النزاعات ودياً قبل اللجوء للقضاء.</p>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">🔄</span> ٧. تعديل الشروط</h3>
+            <p>نحتفظ بحق تعديل هذه الشروط في أي وقت. سنخطر المستخدمين المسجلين عبر البريد الإلكتروني بأي تغييرات جوهرية قبل ٣٠ يوماً من سريانها. استمرار استخدام الموقع بعد التعديلات يُعتبر قبولاً ضمنياً للشروط الجديدة.</p>
+          </div>
+
+          <div class="legal-sig">
+            <div class="sig-left">
+              <strong>شروط الاستخدام — صِحَّتي</strong><br>
+              سارية المفعول منذ: ١ يناير ٢٠٢٦ · آخر مراجعة: ٢ أبريل ٢٠٢٦
+            </div>
+            <div class="sig-stamp">✅ معتمدة ومراجعة قانونياً</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════
+           3. إخلاء المسؤولية الطبية
+      ════════════════════════════ -->
+      <section class="legal-page" id="medical">
+        <div class="page-header">
+          <div class="page-header-inner">
+            <div class="page-icon icon-red">🏥</div>
+            <div>
+              <div class="page-title">إخلاء المسؤولية الطبية</div>
+              <div class="page-subtitle">Medical Disclaimer — يُرجى قراءته قبل اتخاذ أي قرار صحي</div>
+            </div>
+          </div>
+          <div class="page-meta">
+            <span class="meta-chip red">⚕️ مهم جداً</span>
+            <span class="meta-chip">📅 أبريل ٢٠٢٦</span>
+          </div>
+        </div>
+
+        <div class="page-body">
+
+          <div class="alert danger">
+            <span class="alert-icon">🚨</span>
+            <div>
+              <strong>تحذير طبي هام جداً:</strong> المحتوى المنشور على موقع صِحَّتي هو لأغراض <strong>تثقيفية وإعلامية فقط</strong>. لا يُعدّ بديلاً عن الاستشارة الطبية المتخصصة. <strong>لا تتخذ أي قرار طبي بناءً على محتوى هذا الموقع دون استشارة طبيب مرخص.</strong>
+            </div>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">📋</span> ١. طبيعة المحتوى الصحي في الموقع</h3>
+            <p>جميع المقالات والنصائح والمعلومات الغذائية المنشورة في موقع صِحَّتي — سواء كتبها فريق التحرير أو ولَّدها الذكاء الاصطناعي — هي <strong>معلومات تثقيفية عامة</strong> تهدف إلى رفع الوعي الصحي. هذه المعلومات لا تأخذ بعين الاعتبار حالتك الصحية الخاصة، تاريخك المرضي، الأدوية التي تتناولها، أو أي عوامل فردية أخرى.</p>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">⚠️</span> ٢. ما لا يحل محله موقعنا</h3>
+            <table class="legal-table">
+              <thead>
+                <tr>
+                  <th>موقع صِحَّتي يقدم</th>
+                  <th>لا يحل محل</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>معلومات تثقيفية عامة عن التغذية</td>
+                  <td class="td-red">استشارة طبيب أو أخصائي تغذية</td>
+                </tr>
+                <tr>
+                  <td>نصائح غذائية عامة وعلمية</td>
+                  <td class="td-red">برنامج غذائي مخصص لحالتك</td>
+                </tr>
+                <tr>
+                  <td>معلومات عن الأعراض والأمراض</td>
+                  <td class="td-red">التشخيص الطبي المتخصص</td>
+                </tr>
+                <tr>
+                  <td>معلومات عن المكملات الغذائية</td>
+                  <td class="td-red">وصف الأدوية والمكملات</td>
+                </tr>
+                <tr>
+                  <td>وصفات طبخ صحية عامة</td>
+                  <td class="td-red">حمية علاجية موصوفة طبياً</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">🚑</span> ٣. حالات الطوارئ الطبية</h3>
+            <div class="alert danger">
+              <span class="alert-icon">🚨</span>
+              <div>في حالات الطوارئ الطبية، <strong>لا تبحث في الإنترنت — اتصل فوراً بالإسعاف أو اذهب لأقرب مستشفى.</strong><br>
+              المغرب: <strong>📞 15 (SAMU)</strong> أو <strong>📞 150 (الإسعاف)</strong></div>
+            </div>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">💊</span> ٤. تحذيرات خاصة</h3>
+            <ul>
+              <li><strong>مرضى السكري والضغط:</strong> لا تعدّل جرعات أدويتك بناءً على محتوى هذا الموقع</li>
+              <li><strong>الحوامل والمرضعات:</strong> استشيري طبيبك قبل أي تغيير غذائي</li>
+              <li><strong>الأطفال:</strong> لا تطبقي أي نظام غذائي على طفلك دون إشراف طبي</li>
+              <li><strong>مرضى الكلى والكبد:</strong> المعلومات الغذائية العامة لا تناسب حالاتكم الخاصة</li>
+              <li><strong>مرضى اضطرابات الأكل:</strong> يُنصح بالحذر الشديد واستشارة متخصص</li>
+              <li><strong>المكملات الغذائية:</strong> لا تتناول أي مكمل دون استشارة طبيب</li>
+            </ul>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">🤖</span> ٥. تحذير خاص بمحتوى الذكاء الاصطناعي</h3>
+            <p>المقالات المولَّدة بأداة الذكاء الاصطناعي في موقعنا قد تحتوي على معلومات عامة صحيحة، لكنها <strong>غير مراجعة من متخصصين طبيين</strong> ولا تراعي حالتك الصحية الفردية. استخدم هذه المقالات للتوعية العامة فقط، وتحقق دائماً من المعلومات الطبية مع طبيبك.</p>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">⚖️</span> ٦. حدود المسؤولية القانونية</h3>
+            <p>لا يتحمل موقع صِحَّتي وفريقه أي مسؤولية قانونية عن أي ضرر صحي أو مالي أو معنوي قد ينتج عن تطبيق المعلومات الواردة في الموقع. المستخدم هو المسؤول الكامل عن قراراته الصحية. هذا الإخلاء من المسؤولية سارٍ بحد أقصى ما يسمح به القانون المغربي المعمول به.</p>
+          </div>
+
+          <div class="alert success">
+            <span class="alert-icon">👨‍⚕️</span>
+            <div><strong>توصيتنا:</strong> اقرأ مقالاتنا لتوسيع معرفتك الصحية، ثم ناقش ما تعلمته مع طبيبك أو أخصائي التغذية. هذا هو الاستخدام الأمثل والآمن لمحتوى صِحَّتي.</div>
+          </div>
+
+          <div class="legal-sig">
+            <div class="sig-left">
+              <strong>إخلاء المسؤولية الطبية — صِحَّتي</strong><br>
+              سارية المفعول منذ: ١ يناير ٢٠٢٦ · آخر مراجعة: ٢ أبريل ٢٠٢٦
+            </div>
+            <div class="sig-stamp">✅ معتمدة قانونياً</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════
+           4. سياسة الكوكيز
+      ════════════════════════════ -->
+      <section class="legal-page" id="cookies">
+        <div class="page-header">
+          <div class="page-header-inner">
+            <div class="page-icon icon-orange">🍪</div>
+            <div>
+              <div class="page-title">سياسة ملفات الارتباط (Cookies)</div>
+              <div class="page-subtitle">Cookie Policy — ما نجمعه ولماذا وكيف تتحكم فيه</div>
+            </div>
+          </div>
+          <div class="page-meta">
+            <span class="meta-chip">📅 أبريل ٢٠٢٦</span>
+            <span class="meta-chip green">✅ متوافقة مع GDPR</span>
+          </div>
+        </div>
+
+        <div class="page-body">
+
+          <div class="sec-block">
+            <h3><span class="h-icon">🍪</span> ١. ما هي ملفات الارتباط؟</h3>
+            <p>ملفات الارتباط (Cookies) هي ملفات نصية صغيرة تُحفظ في متصفحك عند زيارة موقعنا. تساعدنا على تذكر تفضيلاتك وتحسين تجربتك. لها دور مهم في وظائف الموقع الأساسية مثل حفظ الوضع الليلي وتفضيلات الأقسام.</p>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">📊</span> ٢. أنواع ملفات الارتباط التي نستخدمها</h3>
+            <table class="legal-table">
+              <thead>
+                <tr>
+                  <th>النوع</th>
+                  <th>الغرض</th>
+                  <th>المدة</th>
+                  <th>يمكن رفضها؟</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>🔧 <strong>ضرورية</strong> (localStorage)</td>
+                  <td>حفظ الوضع الليلي، المقالات المحفوظة، تفضيلات الموقع</td>
+                  <td>دائمة حتى المسح</td>
+                  <td class="td-red">لا (وظيفية)</td>
+                </tr>
+                <tr>
+                  <td>📈 <strong>تحليلية</strong></td>
+                  <td>إحصاءات الزيارات (مجهولة الهوية)</td>
+                  <td>٩٠ يوماً</td>
+                  <td class="td-green">نعم</td>
+                </tr>
+                <tr>
+                  <td>📢 <strong>الإعلانات</strong></td>
+                  <td>قياس أداء الإعلانات المباشرة</td>
+                  <td>٣٠ يوماً</td>
+                  <td class="td-green">نعم</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">🎛️</span> ٣. كيف تتحكم في ملفات الارتباط؟</h3>
+            <ul>
+              <li><strong>من إعدادات المتصفح:</strong> يمكنك حذف جميع ملفات الارتباط أو منعها في أي وقت</li>
+              <li><strong>Chrome:</strong> الإعدادات ← الخصوصية والأمان ← ملفات تعريف الارتباط</li>
+              <li><strong>Firefox:</strong> الإعدادات ← الخصوصية والحماية</li>
+              <li><strong>Safari:</strong> التفضيلات ← الخصوصية</li>
+              <li><strong>تنبيه:</strong> رفض الكوكيز الضرورية قد يؤثر على بعض وظائف الموقع</li>
+            </ul>
+          </div>
+
+          <div class="contact-box">
+            <div class="contact-info">
+              <h4>🎛️ إدارة تفضيلات الكوكيز</h4>
+              <p>يمكنك في أي وقت تعديل موافقتك على ملفات الارتباط</p>
+            </div>
+            <div class="contact-links">
+              <button class="contact-btn" onclick="showCookieBanner()">⚙️ تعديل التفضيلات</button>
+              <button class="contact-btn outline" onclick="clearCookies()">🗑️ مسح جميع الكوكيز</button>
+            </div>
+          </div>
+
+          <div class="legal-sig">
+            <div class="sig-left">
+              <strong>سياسة الكوكيز — صِحَّتي</strong><br>
+              سارية المفعول منذ: ١ يناير ٢٠٢٦ · آخر مراجعة: ٢ أبريل ٢٠٢٦
+            </div>
+            <div class="sig-stamp">✅ متوافقة مع GDPR</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════
+           5. سياسة المحتوى الذكي
+      ════════════════════════════ -->
+      <section class="legal-page" id="ai">
+        <div class="page-header">
+          <div class="page-header-inner">
+            <div class="page-icon icon-gold">🤖</div>
+            <div>
+              <div class="page-title">سياسة المحتوى المولَّد بالذكاء الاصطناعي</div>
+              <div class="page-subtitle">AI Content Policy — شفافية كاملة حول كيفية توليد المحتوى</div>
+            </div>
+          </div>
+          <div class="page-meta">
+            <span class="meta-chip">📅 أبريل ٢٠٢٦</span>
+            <span class="meta-chip green">✅ شفافية كاملة</span>
+          </div>
+        </div>
+
+        <div class="page-body">
+
+          <div class="alert info">
+            <span class="alert-icon">🤖</span>
+            <div><strong>نلتزم بالشفافية الكاملة:</strong> بعض مقالات موقع صِحَّتي يتم توليدها بواسطة الذكاء الاصطناعي (Claude من Anthropic). نُفصح عن ذلك بوضوح ونوضح هنا سياستنا الكاملة.</div>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">⚙️</span> ١. كيف نستخدم الذكاء الاصطناعي</h3>
+            <ul>
+              <li>نستخدم الذكاء الاصطناعي لتوليد مقالات تثقيفية صحية أصيلة بالعربية</li>
+              <li>جميع المقالات المولَّدة هي محتوى <strong>أصيل لم يُنشر في أي مكان آخر</strong></li>
+              <li>لا نقتبس من مصادر أخرى ولا نعيد نشر محتوى محمي بحقوق النشر</li>
+              <li>المحتوى المولَّد هو ملكية كاملة لموقع صِحَّتي أو للمستخدم الذي طلب توليده</li>
+            </ul>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">🏷️</span> ٢. الإفصاح وحقوق الملكية</h3>
+            <table class="legal-table">
+              <thead>
+                <tr>
+                  <th>نوع المحتوى</th>
+                  <th>من كتبه؟</th>
+                  <th>من يملكه؟</th>
+                  <th>حقوق النشر؟</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>مقالات فريق التحرير</td>
+                  <td>محررو صِحَّتي</td>
+                  <td>موقع صِحَّتي</td>
+                  <td class="td-green">محمية بالكامل</td>
+                </tr>
+                <tr>
+                  <td>مقالات مولَّدة بالـ AI للموقع</td>
+                  <td>الذكاء الاصطناعي</td>
+                  <td>موقع صِحَّتي</td>
+                  <td class="td-green">أصيلة — لا مشكلة</td>
+                </tr>
+                <tr>
+                  <td>مقالات طلبها المستخدم</td>
+                  <td>الذكاء الاصطناعي</td>
+                  <td>المستخدم نفسه ✅</td>
+                  <td class="td-green">أصيلة — ملكه الكاملة</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">🚫</span> ٣. ما لا يفعله الذكاء الاصطناعي في موقعنا</h3>
+            <ul>
+              <li>لا يقتبس نصوصاً من مقالات منشورة أخرى</li>
+              <li>لا ينسخ محتوى محمي بحقوق الملكية الفكرية</li>
+              <li>لا يقدم تشخيصات طبية أو وصفات دوائية</li>
+              <li>لا يُنشئ محتوى مضللاً أو مبالغاً في الادعاءات الطبية</li>
+              <li>لا يستهدف فئات ضعيفة بمحتوى غير مناسب</li>
+            </ul>
+          </div>
+
+          <div class="sec-block">
+            <h3><span class="h-icon">✅</span> ٤. ضمانات الجودة للمحتوى المولَّد</h3>
+            <ul>
+              <li>المحتوى المولَّد يستند إلى معرفة علمية عامة موثوقة</li>
+              <li>نضيف دائماً تنبيهاً واضحاً بأن المحتوى للأغراض التثقيفية فقط</li>
+              <li>نحتفظ بحق مراجعة وتعديل المحتوى المولَّد قبل نشره الرسمي</li>
+              <li>يُنصح المستخدمون بالتحقق من المعلومات الطبية مع متخصصين</li>
+            </ul>
+          </div>
+
+          <div class="alert success">
+            <span class="alert-icon">💡</span>
+            <div><strong>حقوقك كمستخدم:</strong> المقالات التي تولِّدها باستخدام أداتنا هي ملكك الكامل — يمكنك نشرها على موقعك، مدونتك، أو أي منصة تريدها <strong>دون أي مخاوف قانونية تتعلق بحقوق النشر</strong> لأن المحتوى مولَّد حصرياً لك.</div>
+          </div>
+
+          <div class="legal-sig">
+            <div class="sig-left">
+              <strong>سياسة المحتوى الذكي — صِحَّتي</strong><br>
+              سارية المفعول منذ: ١ يناير ٢٠٢٦ · آخر مراجعة: ٢ أبريل ٢٠٢٦
+            </div>
+            <div class="sig-stamp">✅ شفافية كاملة</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CONTACT GENERAL -->
+      <div style="background:var(--surface);border-radius:var(--r-lg);border:1px solid var(--border);padding:26px;box-shadow:var(--sh)">
+        <h3 style="font-family:'Noto Naskh Arabic',serif;font-size:1.15rem;font-weight:700;color:var(--blue);margin-bottom:16px">📩 للتواصل بشأن الشؤون القانونية</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+          <div style="background:var(--blue-l);border-radius:9px;padding:14px">
+            <div style="font-size:.76rem;color:var(--mid);font-weight:700;margin-bottom:4px">🔒 الخصوصية</div>
+            <div style="font-size:.86rem;font-weight:700;color:var(--ink)">privacy@sihaty.ma</div>
+          </div>
+          <div style="background:var(--green-l);border-radius:9px;padding:14px">
+            <div style="font-size:.76rem;color:var(--mid);font-weight:700;margin-bottom:4px">⚖️ الشؤون القانونية</div>
+            <div style="font-size:.86rem;font-weight:700;color:var(--ink)">legal@sihaty.ma</div>
+          </div>
+          <div style="background:var(--gold-l);border-radius:9px;padding:14px">
+            <div style="font-size:.76rem;color:var(--mid);font-weight:700;margin-bottom:4px">📢 الإعلانات</div>
+            <div style="font-size:.86rem;font-weight:700;color:var(--ink)">ads@sihaty.ma</div>
+          </div>
+          <div style="background:var(--red-l);border-radius:9px;padding:14px">
+            <div style="font-size:.76rem;color:var(--mid);font-weight:700;margin-bottom:4px">🏥 المحتوى الطبي</div>
+            <div style="font-size:.86rem;font-weight:700;color:var(--ink)">medical@sihaty.ma</div>
+          </div>
+        </div>
+        <p style="font-size:.8rem;color:var(--mid);margin-top:14px;line-height:1.65">نلتزم بالرد على جميع الاستفسارات القانونية خلال <strong>٣-٥ أيام عمل</strong>. للطلبات العاجلة المتعلقة بالبيانات الشخصية، نرد خلال <strong>٧٢ ساعة</strong>.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="legal-footer">
+  <p>© ٢٠٢٦ صِحَّتي — جميع الحقوق محفوظة | الدار البيضاء، المملكة المغربية</p>
+  <p style="font-size:.76rem;opacity:.7">هذه الوثائق القانونية لا تُعدّ استشارة قانونية متخصصة. للحالات الخاصة، يُنصح باستشارة محامٍ مرخص.</p>
+  <div class="links">
+    <a onclick="document.getElementById('privacy').scrollIntoView({behavior:'smooth'})">سياسة الخصوصية</a>
+    <a onclick="document.getElementById('terms').scrollIntoView({behavior:'smooth'})">شروط الاستخدام</a>
+    <a onclick="document.getElementById('medical').scrollIntoView({behavior:'smooth'})">إخلاء المسؤولية الطبية</a>
+    <a onclick="document.getElementById('cookies').scrollIntoView({behavior:'smooth'})">سياسة الكوكيز</a>
+    <a onclick="document.getElementById('ai').scrollIntoView({behavior:'smooth'})">سياسة الذكاء الاصطناعي</a>
+  </div>
+</div>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-text">
+    🍪 نستخدم ملفات الارتباط لتحسين تجربتك وحفظ تفضيلاتك. بموافقتك، تساعدنا على تقديم خدمة أفضل.
+    <a onclick="document.getElementById('cookies').scrollIntoView({behavior:'smooth'});closeCookieBanner()">اعرف المزيد</a>
+  </div>
+  <div class="cookie-actions">
+    <button class="cookie-btn settings" onclick="document.getElementById('cookies').scrollIntoView({behavior:'smooth'});closeCookieBanner()">⚙️ الإعدادات</button>
+    <button class="cookie-btn reject" onclick="rejectCookies()">رفض غير الضروري</button>
+    <button class="cookie-btn accept" onclick="acceptCookies()">✅ قبول الكل</button>
+  </div>
+</div>
+
+<button id="btop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="العودة للأعلى">↑</button>
+<div class="toast" id="toastEl"></div>
+
+<script>
+/* ══ INIT ══ */
+var theme = 'light';
+try { theme = localStorage.getItem('sihaty_theme') || 'light'; } catch(e){}
+document.documentElement.setAttribute('data-theme', theme);
+document.getElementById('themeBtn').textContent = theme === 'dark' ? '☀️' : '🌙';
+
+/* ══ DARK MODE ══ */
+function toggleTheme() {
+  var cur = document.documentElement.getAttribute('data-theme');
+  var next = cur === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+  try { localStorage.setItem('sihaty_theme', next); } catch(e){}
+}
+
+/* ══ PROGRESS + BACK TO TOP ══ */
+window.addEventListener('scroll', function() {
+  var de = document.documentElement;
+  var pct = (de.scrollTop / (de.scrollHeight - de.clientHeight)) * 100;
+  document.getElementById('prog').style.width = pct + '%';
+  document.getElementById('btop').classList.toggle('show', de.scrollTop > 350);
+
+  /* Active nav link */
+  var sections = ['privacy','terms','medical','cookies','ai'];
+  var active = sections[0];
+  sections.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el && de.scrollTop >= el.offsetTop - 120) active = id;
+  });
+  document.querySelectorAll('.legal-nav ul li a').forEach(function(a) {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + active);
+  });
+});
+
+/* ══ NAV ACTIVE ══ */
+function setActive(el) {
+  document.querySelectorAll('.legal-nav ul li a').forEach(function(a) { a.classList.remove('active'); });
+  el.classList.add('active');
+}
+
+/* ══ TOAST ══ */
+function toast(msg, type) {
+  var t = document.getElementById('toastEl');
+  t.textContent = msg;
+  t.className = 'toast show' + (type ? ' ' + type : '');
+  clearTimeout(t._t);
+  t._t = setTimeout(function() { t.className = 'toast'; }, 3000);
+}
+
+/* ══ COPY TEXT ══ */
+function copyText(text) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).catch(function() { fallbackCopy(text); });
+  } else {
+    fallbackCopy(text);
+  }
+}
+function fallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try { document.execCommand('copy'); } catch(e){}
+  document.body.removeChild(ta);
+}
+
+/* ══ COOKIES ══ */
+function showCookieBanner() {
+  document.getElementById('cookieBanner').classList.add('show');
+}
+function closeCookieBanner() {
+  document.getElementById('cookieBanner').classList.remove('show');
+}
+function acceptCookies() {
+  try { localStorage.setItem('sihaty_cookies', 'accepted'); } catch(e){}
+  closeCookieBanner();
+  toast('✅ تم قبول ملفات الارتباط', 'ok');
+}
+function rejectCookies() {
+  try { localStorage.setItem('sihaty_cookies', 'rejected'); } catch(e){}
+  closeCookieBanner();
+  toast('تم رفض ملفات الارتباط غير الضرورية', '');
+}
+function clearCookies() {
+  try {
+    var keys = Object.keys(localStorage);
+    keys.forEach(function(k) { if (k !== 'sihaty_theme') localStorage.removeItem(k); });
+  } catch(e){}
+  toast('🗑️ تم مسح جميع ملفات الارتباط', 'ok');
+}
+
+/* Show cookie banner if not decided */
+(function() {
+  var decided = false;
+  try { decided = !!localStorage.getItem('sihaty_cookies'); } catch(e){}
+  if (!decided) {
+    setTimeout(function() { showCookieBanner(); }, 1500);
+  }
+})();
+</script>
+</body>
+</html>
