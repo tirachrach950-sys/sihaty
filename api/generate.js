@@ -6,15 +6,17 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).end();
 
-  const { prompt } = req.body || {};
-  const KEY = process.env.ANTHROPIC_API_KEY;
+  let prompt = 'اكتب مقالاً صحياً قصيراً';
+  try {
+    const body = req.body;
+    if (body && body.prompt) prompt = body.prompt;
+  } catch(e) {}
 
-  if (!KEY) {
-    return res.status(500).json({ error: 'NO_KEY', debug: 'ANTHROPIC_API_KEY not found in env' });
-  }
+  const KEY = process.env.ANTHROPIC_API_KEY;
+  if (!KEY) return res.status(500).json({ error: 'No API key in environment variables' });
 
   try {
-    const r = await fetch('https://api.anthropic.com/v1/messages', {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -24,24 +26,20 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         model: 'claude-3-haiku-20240307',
         max_tokens: 1000,
-        messages: [{ role: 'user', content: prompt || 'قل مرحبا' }]
+        messages: [{ role: 'user', content: prompt }]
       })
     });
 
-    const text = await r.text();
-
-    if (!r.ok) {
-      return res.status(500).json({ 
-        error: 'API_ERROR',
-        status: r.status,
-        body: text
-      });
-    }
-
-    const data = JSON.parse(text);
+    const data = await response.json();
     return res.status(200).json(data);
 
   } catch (e) {
-    return res.status(500).json({ error: 'EXCEPTION', message: e.message });
+    return res.status(500).json({ error: e.message });
   }
 }
+
+export const config = {
+  api: {
+    bodyParser: true,
+  },
+};
