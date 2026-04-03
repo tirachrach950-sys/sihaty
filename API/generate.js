@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   if (!prompt) return res.status(400).json({ error: 'Prompt required' });
 
   const KEY = process.env.ANTHROPIC_API_KEY;
-  if (!KEY) return res.status(500).json({ error: 'API key not configured' });
+  if (!KEY) return res.status(500).json({ error: 'NO API KEY FOUND IN ENV' });
 
   try {
     const r = await fetch('https://api.anthropic.com/v1/messages', {
@@ -21,21 +21,27 @@ export default async function handler(req, res) {
         'anthropic-version': '2023-06-01'
       },
       body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
+        model: 'claude-3-5-haiku-20241022',
         max_tokens: 1500,
         messages: [{ role: 'user', content: prompt }]
       })
     });
 
+    const data = await r.json();
+
+    // Return full response for debugging
     if (!r.ok) {
-      const errText = await r.text();
-      return res.status(r.status).json({ error: errText });
+      return res.status(200).json({
+        content: [{ text: 'API ERROR: ' + JSON.stringify(data) }]
+      });
     }
 
-    const data = await r.json();
     return res.status(200).json(data);
 
   } catch (e) {
-    return res.status(500).json({ error: e.message });
+    return res.status(200).json({
+      content: [{ text: 'FETCH ERROR: ' + e.message }]
+    });
   }
 }
+
