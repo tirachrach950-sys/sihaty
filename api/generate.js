@@ -14,7 +14,7 @@ module.exports = async function handler(req, res) {
   const prompt = (req.body && req.body.prompt) || 'اكتب مقالاً صحياً قصيراً';
 
   const payload = JSON.stringify({
-    model: 'claude-3-haiku-20240307',
+    model: 'claude-haiku-4-5-20251001',
     max_tokens: 1000,
     messages: [{ role: 'user', content: prompt }]
   });
